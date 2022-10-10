@@ -42,7 +42,7 @@ VALUE
 ("Andi Maghfirah Inzani S.", "BTP", "Sistem Informasi"),
 ("Nur Hikmah", "Jalan Sejati", "Sistem Informasi"),
 ("Martahan Mikhael Butar B.", "Aspol Perintis", "Sistem Informasi");
-#select *from students;
+#select * from students;
 
 INSERT INTO courses (name, duration)
 VALUE 
@@ -50,10 +50,10 @@ VALUE
 ("Pemrograman Web", 90),
 ("Struktur Diskrit", 90),
 ("Riset Teknologi", 150);
-#select *from Courses;
+#select * from Courses;
 
 insert into schedule (Student_id, course_id, date, time)
-value 
+VALUE 
 (1, 2, '2022-10-10', '2022-10-10 08:00:00'),
 (2, 1, '2022-10-10', '2022-10-10 07:30:00'),
 (3, 2, '2022-10-11', '2022-10-11 13:00:00'),
@@ -61,7 +61,7 @@ value
 (5, 3, '2022-10-13', '2022-10-13 16:00:00'),
 (6, 3, '2022-10-15', '2022-10-15 08:00:00'),
 (7, 1, '2022-10-19', '2022-10-19 08:00:00');
-#select *from schedule;
+#select * from schedule;
 
 update students
 set `full name`="Andi Maghfirah Inzani"
@@ -77,5 +77,3 @@ inner join schedule as Sc
 on St.student_id = Sc.student_id
 inner join courses as Co
 on Sc. course_id = Co.course_id;
-
-
