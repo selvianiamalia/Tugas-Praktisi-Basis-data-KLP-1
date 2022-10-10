@@ -2,6 +2,7 @@ create database db_praktisiSisfo;
 use db_praktisiSisfo;
 
 -- DDL-- 
+-- membuat table students --
 create table students (
 student_id int not null auto_increment,
 `full name` varchar (255) not null, 
@@ -11,6 +12,7 @@ primary key (student_id)
 );
 #desc students;
 
+-- membuat table courses --
 create table courses (
 course_id int not null auto_increment,
 name varchar (255) not null,
@@ -19,6 +21,7 @@ primary key (course_id)
 ); 
 #desc courses;
 
+-- membuat table schedule --
 create table schedule (
 schedule_id int not null auto_increment,
 student_id int not null,
@@ -44,6 +47,7 @@ VALUE
 ("Martahan Mikhael Butar B.", "Aspol Perintis", "Sistem Informasi");
 #select *from students;
 
+-- menginput data pada table courses -- 
 INSERT INTO courses (name, duration)
 VALUE 
 ("Struktur Data", 120),
@@ -52,6 +56,7 @@ VALUE
 ("Riset Teknologi", 150);
 #select *from Courses;
 
+-- menambahkan data pada table schedule --
 insert into schedule (Student_id, course_id, date, time)
 value 
 (1, 2, '2022-10-10', '2022-10-10 08:00:00'),
@@ -63,10 +68,12 @@ value
 (7, 1, '2022-10-19', '2022-10-19 08:00:00');
 #select *from schedule;
 
+-- mengubah data pada table students -- 
 update students
 set `full name`="Andi Maghfirah Inzani"
 where Student_id="5";
 
+-- mengubah data pada table courses --
 UPDATE courses
 SET `duration` = "60"
 WHERE course_id = 4;
