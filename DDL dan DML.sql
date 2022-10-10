@@ -2,6 +2,7 @@ create database db_praktisiSisfo;
 use db_praktisiSisfo;
 
 -- DDL-- 
+-- membuat table students--
 create table students (
 student_id int not null auto_increment,
 `full name` varchar (255) not null, 
@@ -11,6 +12,7 @@ primary key (student_id)
 );
 #desc students
 
+-- membuat table courses--
 create table courses (
 course_id int not null auto_increment,
 name varchar (255) not null,
@@ -19,6 +21,7 @@ primary key (course_id)
 ); 
 #desc courses
 
+-- membuat table schedule --
 create table schedule (
 schedule_id int not null auto_increment,
 student_id int not null,
@@ -29,9 +32,10 @@ primary key (schedule_id),
 foreign key (student_id) references students (student_id),
 foreign key (course_id) references courses (course_id)
 );
+-- menampilkan table schedule --
 desc schedule
 
-DML--
+--DML--
 masukkan data pada tabel students
 INSERT INTO students (`full name`, address, major)
 VALUE 
