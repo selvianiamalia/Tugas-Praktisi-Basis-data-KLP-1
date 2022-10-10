@@ -10,7 +10,7 @@ address varchar (255) not null,
 major varchar (100) not null,
 primary key (student_id)
 );
-#desc students;
+--desc students;
 
 -- membuat table courses --
 create table courses (
