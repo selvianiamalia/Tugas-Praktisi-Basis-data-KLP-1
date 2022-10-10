@@ -9,7 +9,7 @@ address varchar (255) not null,
 major varchar (100) not null,
 primary key (student_id)
 );
-#desc students
+#desc students;
 
 create table courses (
 course_id int not null auto_increment,
@@ -17,7 +17,7 @@ name varchar (255) not null,
 duration int not null,
 primary key (course_id)
 ); 
-#desc courses
+#desc courses;
 
 create table schedule (
 schedule_id int not null auto_increment,
@@ -29,10 +29,10 @@ primary key (schedule_id),
 foreign key (student_id) references students (student_id),
 foreign key (course_id) references courses (course_id)
 );
-desc schedule
+#desc schedule;
 
-DML--
-masukkan data pada tabel students
+--DML--
+#masukkan data pada tabel students
 INSERT INTO students (`full name`, address, major)
 VALUE 
 ("Rendy Luis", "Jalan Sahabat", "Sistem Informasi"),
@@ -42,7 +42,7 @@ VALUE
 ("Andi Maghfirah Inzani S.", "BTP", "Sistem Informasi"),
 ("Nur Hikmah", "Jalan Sejati", "Sistem Informasi"),
 ("Martahan Mikhael Butar B.", "Aspol Perintis", "Sistem Informasi");
-select *from students;
+#select *from students;
 
 INSERT INTO courses (name, duration)
 VALUE 
@@ -50,7 +50,7 @@ VALUE
 ("Pemrograman Web", 90),
 ("Struktur Diskrit", 90),
 ("Riset Teknologi", 150);
-#select *from Courses
+#select *from Courses;
 
 insert into schedule (Student_id, course_id, date, time)
 value 
@@ -61,7 +61,7 @@ value
 (5, 3, '2022-10-13', '2022-10-13 16:00:00'),
 (6, 3, '2022-10-15', '2022-10-15 08:00:00'),
 (7, 1, '2022-10-19', '2022-10-19 08:00:00');
-select *from schedule
+#select *from schedule;
 
 update students
 set `full name`="Andi Maghfirah Inzani"
@@ -70,13 +70,12 @@ where Student_id="5";
 UPDATE courses
 SET `duration` = "60"
 WHERE course_id = 4;
-SELECT * FROM courses
 
 select St.student_id, Co.name, Sc. date, Sc.time
 from students as St
 inner join schedule as Sc
 on St.student_id = Sc.student_id
 inner join courses as Co
-on Sc. course_id = Co.course_id
+on Sc. course_id = Co.course_id;
 
 
