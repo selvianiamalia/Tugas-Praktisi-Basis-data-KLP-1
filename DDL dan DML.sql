@@ -9,7 +9,7 @@ address varchar (255) not null,
 major varchar (100) not null,
 primary key (student_id)
 );
-#desc students;
+--desc students;
 
 create table courses (
 course_id int not null auto_increment,
