@@ -39,7 +39,7 @@ foreign key (course_id) references courses (course_id)
 INSERT INTO students (`full name`, address, major)
 VALUE 
 ("Rendy Luis", "Jalan Sahabat", "Sistem Informasi"),
-("Muh. Shofwan Siswandi", "Jalan Perintis", "Sistem Informasi"),
+("Muh. Shofwan Siswandi", "Jalan Pettarani", "Sistem Informasi"),
 ("Indah Kurnia Ilahi", "Jalan Sahabat", "Sistem Informasi"),
 ("Selviani Amalia Kartika", "Jalan Andi Tonro", "Sistem Informasi"),
 ("Andi Maghfirah Inzani S.", "BTP", "Sistem Informasi"),
